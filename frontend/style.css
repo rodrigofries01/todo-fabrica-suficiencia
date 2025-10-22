@@ -1,0 +1,50 @@
+body { font-family: Arial, sans-serif; background:#f7f7f7; margin:0; }
+.error { color:red; }
+.done { text-decoration: line-through; color: gray; cursor: pointer; }
+span { cursor: pointer; }
+
+/* Botão flutuante "Next" */
+.next-button {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 16px;
+	border-radius: 999px;
+	background: linear-gradient(135deg, #6C63FF 0%, #3F8EFC 100%);
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+	box-shadow: 0 8px 20px rgba(63, 142, 252, 0.35);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.next-button .arrow {
+	transition: transform 0.2s ease;
+}
+
+.next-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 28px rgba(63, 142, 252, 0.45);
+}
+
+.next-button:hover .arrow {
+	transform: translateX(4px);
+}
+
+.next-button:active {
+	transform: translateY(0);
+}
+
+.next-button:focus-visible {
+	outline: 3px solid rgba(63, 142, 252, 0.5);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.next-button, .next-button .arrow {
+		transition: none;
+	}
+}
